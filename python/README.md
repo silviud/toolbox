@@ -3,8 +3,8 @@ Python Toolbox
 
 Contents
 ---------------------
-* getopt example
-* class and usage example
+* getopt example, shows how to process command line arguments
+* simple class and usage example
 * debug statements with code file + line example
 * json data from URL example
 * parse json simple example
