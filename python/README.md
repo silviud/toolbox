@@ -1,8 +1,8 @@
 Python Toolbox
-=======
+====================
 
 Contents
-=======
+---------------------
 getopt example
 class and usage example
 debug statements with code file + line example
