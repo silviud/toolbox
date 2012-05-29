@@ -1,0 +1,41 @@
+#!/usr/bin/jython
+'''
+blurb: basic example of how to query JMX attributes from jython
+'''
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.PrintStream;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
+import javax.management.MBeanServerConnection;
+import javax.management.ObjectName;
+import javax.management.openmbean.CompositeDataSupport;
+import javax.management.openmbean.CompositeType;
+import javax.management.remote.JMXConnector;
+import javax.management.remote.JMXConnectorFactory;
+import javax.management.remote.JMXServiceURL;
+
+from array import array
+# put correct auth info in here
+ad = array(java.lang.String,["username","password"])
+n = java.util.HashMap()
+n.put (javax.management.remote.JMXConnector.CREDENTIALS, ad);
+# this is a example but you probably want the url as a URL object or similar...
+jmxurl = javax.management.remote.JMXServiceURL("service:jmx:rmi:///jndi/rmi://10.0.0.233:12086/jmxrmi")
+testme = javax.management.remote.JMXConnectorFactory.connect(jmxurl,n)
+connection = testme.getMBeanServerConnection();
+
+# The actual query
+object="java.lang:type=Memory"
+attribute="HeapMemoryUsage"
+
+# Execute
+attr=connection.getAttribute(javax.management.ObjectName(object),attribute)
+print attr
+
+# Close the connection
+testme.close()
