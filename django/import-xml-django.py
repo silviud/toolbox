@@ -3,6 +3,8 @@
 This example reads a XML file from a web service and converts it into a 
 python list object and then imports the list objects into existing django Models
 
+This file should reside within Django Project along side settings.py
+
 XML example
 <?xml version="1.0" encoding="UTF-8"?>
 <config

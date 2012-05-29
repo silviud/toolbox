@@ -13,7 +13,7 @@ My CSV structure:
 This is a very specific example ripped out from a inventory database prototype. But it illustrates
 how to import models from csv and check for duplicate and link to other objects.
 
-This script lies in the top level django application directory along side settings.py and my applications
+This script lies in the top level django project directory along side settings.py and my applications
 so it has import access to `appname`.models
 
 '''
