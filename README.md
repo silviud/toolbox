@@ -6,3 +6,4 @@ Unix Union Public Toolbox
 Contents
 ---------------------
 * python toolbox
+* django toolbox
