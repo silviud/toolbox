@@ -5,5 +5,5 @@ Unix Union Public Toolbox
 
 Contents
 ---------------------
-* python toolbox
-* django toolbox
+* python compartment
+* django compartment
