@@ -5,10 +5,10 @@ this reads the file Hardware-new.csv and creates models accordingly!
 
 My CSV structure:
 	Hardware,Location,FQDN,rackname,ManagementIP,HW Model,SerialNumber
-	ubhw-0001,KWK,kwkbo03.kwk.mydomain.com,S-909,10.22.17.31,Sun Microsystems Sun Fire X4100 M2,1321321321
-	ubhw-0002,KWK,kwkbo04.kwk.mydomain.com,S-906,10.22.17.32,Sun Microsystems Sun Fire X4100 M2,43214324342
-	ubhw-0003,KWK,kwkbo05.kwk.mydomain.com,S-909,10.22.17.33,Sun Microsystems Sun Fire X4100 M2,43242314231
-	ubhw-0004,KWK,kwkbo06.kwk.mydomain.com,S-908,10.22.17.34,Sun Microsystems Sun Fire X4100 M2,43214324121
+	ubhw-0001,KWK,kwkbo03.kwk.mydomain.com,S-909,10.0.17.31,Sun Microsystems Sun Fire X4100 M2,1321321321
+	ubhw-0002,KWK,kwkbo04.kwk.mydomain.com,S-906,10.0.17.32,Sun Microsystems Sun Fire X4100 M2,43214324342
+	ubhw-0003,KWK,kwkbo05.kwk.mydomain.com,S-909,10.0.17.33,Sun Microsystems Sun Fire X4100 M2,43242314231
+	ubhw-0004,KWK,kwkbo06.kwk.mydomain.com,S-908,10.0.17.34,Sun Microsystems Sun Fire X4100 M2,43214324121
 
 This is a very specific example ripped out from a inventory database prototype. But it illustrates
 how to import models from csv and check for duplicate and link to other objects.
