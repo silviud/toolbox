@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 '''
 blurb: Plotting multiple values from CSV-like data onto matplotlib graphs
+requires: matplotlib, numpy
 '''
 import datetime
 import numpy as np
