@@ -6,6 +6,7 @@ data-handling
 Converting Data to Django Objects
 * import-csv-django.py -> import CSV data from file into Django Model Objects
 * import-xml-django.py -> import XML data from URL into Django Model Objects
+* import-puppet-RHN-django.py -> importing puppet data from foreman and RedHat Sattelite into Django Objects
 
 views
 ---------------------
