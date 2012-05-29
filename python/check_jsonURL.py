@@ -1,4 +1,7 @@
 #!/usr/bin/python
+'''
+Simple JSON Nagios Check which can read JSON data from URL and compare to levels / match strings
+'''
 import sys
 import getopt
 import simplejson
