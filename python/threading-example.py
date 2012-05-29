@@ -23,9 +23,11 @@ import thread
 import sys
 import time
 from random import randrange
+# import my debugMsg function which show line numbers from the stack
+from debugger import debugMsg
 
 # max threads to run simultaneously
-max_threads = 1000
+max_threads = 10
 
 # initiators are the number of threads initiating the someThreadFunction, I use more multiple initiators to spawn threads even faster
 initiators = 2
@@ -41,9 +43,9 @@ debug = True
 initiator_count = 0
 initiatorThreads = []
 
-def debugMsg(msg):
-	if debug == True:
-		sys.stdout.write("DEBUG: " + msg + "\n")
+#def debugMsg(msg):
+#	if debug == True:
+#		sys.stdout.write("DEBUG: " + msg + "\n")
 
 class someThreadFunction(threading.Thread):
 	def __init__(self,threadId):

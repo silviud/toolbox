@@ -29,8 +29,8 @@ Example Usage:
 import sys
 import inspect
 
-# Disable debug level
-verbose = False
+# Debug on/off
+verbose = True
 
 def debugMsg(msg, **kwargs):
     """Prints msg out if verbose = True.
