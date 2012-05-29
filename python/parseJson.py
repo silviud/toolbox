@@ -1,4 +1,7 @@
 #!/usr/bin/python
+'''
+Very simple example of how to get JSON from a URL and access the nodes
+'''
 import simplejson
 import urllib
 

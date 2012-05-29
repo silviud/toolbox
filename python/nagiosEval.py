@@ -1,4 +1,4 @@
- 
+#!/usr/bin/python 
 class nagiosEval:
     """ called with warning, critical, match and value to compare
         example:
