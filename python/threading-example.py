@@ -1,8 +1,6 @@
 #!/usr/bin/python
-# a Simple Python Threading Example with Thread Timeouts
-# by Kegan Holtzhausen
 '''
-Threading in Python with Thread Timeouts
+blurb: a Simple Python Threading Example with Thread Timeouts
 
 If you're writing a threaded application in python, you need to be able to manage your threads. I have done this following this strategy:
 

@@ -1,10 +1,13 @@
 #!/usr/bin/python
 '''
+blurb: Simple command line argument parsing.
+
 Here is a simple command line arguments parser setup which I use in all my python scripts.
 It uses sys and getopt.
 
-You can use short or long args when calling this script.
-Example: ./argsv.py  -h 1.2.3.4 -o apache2 --domain=www.unixunion.org
+You can use short or long flags when calling this script.
+Example: ./argsv.py  -h 1.2.3.4 -o apache2 -d www.unixunion.org
+Example: ./argsv.py  --host=1.2.3.4 -object=apache2 --domain=www.unixunion.org
 
 '''
 
@@ -13,6 +16,8 @@ import sys
 import getopt
 
 def debugMsg(msg):
+    """Just prints out events
+    """
     if verbose == True:
         print "DEBUG: " + str(msg)
 
@@ -21,14 +26,11 @@ def usage():
     print 'argsv.py'
     print 'by Kegan Holtzhausen'
     print
-    print 'argsv.py'
-    print
     print 'mandatory options:'
     print ' -h|--host= host-to-query eg: "www.foo.com"'
     print ' -o|--object= object-to-query eg: "heapmemory"'
     print ' -d|--domain= domain-to-query eg: "glassfishdomain" or "all"'
     print
-
 
 
 def main():
@@ -63,6 +65,3 @@ if __name__ == "__main__":
         verbose=True
         main()
 
-
- 
- 

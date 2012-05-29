@@ -1,6 +1,6 @@
 #!/usr/bin/python
 '''
-Very simple example of how to get JSON from a URL and access the nodes
+blurb: Very simple example of how to get JSON from a URL and access the data nodes
 '''
 import simplejson
 import urllib

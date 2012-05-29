@@ -1,6 +1,6 @@
 #!/usr/bin/python
 '''
-A example of some classes which can be imported and used as in class-example.py
+blurb: An example of with some simple classes which can be imported and used as in class-example.py.
 '''
 import os
 import sys

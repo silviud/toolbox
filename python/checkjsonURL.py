@@ -1,6 +1,6 @@
 #!/usr/bin/python
 '''
-Simple JSON Nagios Check which can read JSON data from URL and compare to levels / match strings
+blurb: Simple JSON Nagios Check which can read JSON data from URL and compare to levels / match strings
 '''
 import sys
 import getopt
@@ -8,10 +8,7 @@ import simplejson
 import urllib
 from nagiosEval import nagiosEval
 
-scriptName='check_jsonUrl.py'
-
 def usage():
-    print scriptName
     print 'by Kegan Holtzhausen'
     print
     print 'mandatory options:'
@@ -26,6 +23,9 @@ def usage():
 
 # forces ints / floats to be just that!
 def typer(s):
+    """Forces ints into ints and floats into floats.
+    :param s: String to force into typed
+    """
     try:
         int(s)
         return int(s)
@@ -35,10 +35,10 @@ def typer(s):
             return float(s)
         except ValueError:
             return str(s)
-            
-
 
 def main():
+    """Main
+    """
     w = None
     c = None
     m = None
@@ -77,8 +77,6 @@ def main():
         print "No such key"
         sys.exit(3)
     
-    
-
 if __name__ == "__main__":
     if len(sys.argv) < 6:
         usage()

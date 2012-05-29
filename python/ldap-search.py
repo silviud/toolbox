@@ -1,4 +1,7 @@
 #!/usr/bin/python
+"""
+blurb: Simple LDAP connect and search example.
+"""
 import ldap
 
 l = ldap.initialize('ldap://ldap.domain.com')
@@ -12,7 +15,6 @@ try:
 except Exception, error:
 	print "Binding error"
 	print error
-
 
 baseDN = "ou=customers,ou=somedomain,ou=sites,dc=domain,dc=com"
 searchScope = ldap.SCOPE_SUBTREE

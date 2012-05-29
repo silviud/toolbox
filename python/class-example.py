@@ -1,4 +1,7 @@
 #!/usr/bin/python
+"""
+blurb: Very simple custom class import and usage example.
+"""
 from myclass import daSql
 list = []
 while True:

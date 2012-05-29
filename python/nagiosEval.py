@@ -1,4 +1,7 @@
 #!/usr/bin/python 
+"""
+blurb: Nagios check output evaluation class as used in checkjsonURL.py
+"""
 class nagiosEval:
     """ called with warning, critical, match and value to compare
         example:

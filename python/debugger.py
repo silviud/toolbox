@@ -1,15 +1,9 @@
 #!/usr/bin/python
 '''
+blurb: debug logging functions which report file, line number and objects in logging statements.
+
 debugger.py
 By Kegan Holtzhausen
-
-Here is a useful stack examination combo, I use this to print out line numbers from where my functions are calling debugMsg.
-
-This code provides:
-	python file name
-	line number
-	python function calling
-	message
 
 Example Output:
 	WARNING jmx.py:203 damGet() 10.0.6.41:custard:unable to update state in db for attribute 'custard-tps:autenticateTPS'
@@ -35,9 +29,14 @@ Example Usage:
 import sys
 import inspect
 
+# Disable debug level
 verbose = False
 
 def debugMsg(msg, **kwargs):
+    """Prints msg out if verbose = True.
+    :param msg: String to print out
+    :param kwargs: Not used, see warningMsg
+    """
     if verbose == True:
         try:
             frm = inspect.stack()[1]
@@ -50,6 +49,10 @@ def debugMsg(msg, **kwargs):
             print "DEBUG (unknown) " + str(msg)
 
 def warningMsg(msg, **kwargs):
+    """Prints msg out and can dump objects too
+    :param msg: String to print out
+    :param kwargs: object=SomeObj will print out the object
+    """
     if kwargs:
         for key in kwargs:
             try:
@@ -77,6 +80,9 @@ def warningMsg(msg, **kwargs):
             
  
 def infoMsg(msg):
+    """Prints msg out
+    :param msg: String to print out
+    """
     try:
         frm = inspect.stack()[1]
         function = str(frm[3])

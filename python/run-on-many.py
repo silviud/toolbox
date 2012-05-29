@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 """
-runall.py by Kegan Holtzhausen
+blurb: Script that uses pexpect to run commands on many hosts.
 
 This can run a command as a user with a password or with certificate on remote machines. Also supports uploading of file/script
 
