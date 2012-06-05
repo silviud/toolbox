@@ -22,6 +22,7 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolb
 from matplotlib.ticker import EngFormatter
 from matplotlib.dates import AutoDateFormatter, AutoDateLocator
 
+number = 21;
 
 
 def readData():
@@ -42,7 +43,7 @@ if __name__ == "__main__":
 	print("Worst by Slow and Very Slow reqs")
 	print("================================")
 	x = 1
-	while x < 11:
+	while x < number:
 		t = list(r[nsorted[nsorted.size-x]])
 		print('Number %s: Transaction: %s Tier %s with Slow count of %s and Very slow count of %s and Stall count of %s out of %s Calls' % (x,t[1], t[20], t[14], t[15], t[16], t[10]))
 		x=x+1
@@ -52,17 +53,17 @@ if __name__ == "__main__":
 	print("Worst by Server Time")
 	print("================================")
 	x = 1
-	while x < 11:
+	while x < number:
 		t = list(r[nsorted[nsorted.size-x]])
 		print('Number %s: Transaction: %s Tier %s with Server Time of %s' % (x,t[1], t[20], t[7]))
 		x=x+1
 
-	nsorted = np.lexsort((r.calls,r.error_))
+	nsorted = np.lexsort((r.calls,r.errors,r.error_))
 	print
 	print("Highest Error Percentage Rate")
 	print("================================")
 	x = 1
-	while x < 11:
+	while x < number:
 		t = list(r[nsorted[nsorted.size-x]])
 		print('Number %s: Transaction: %s Tier %s with Error Rate of %s Percent out of %s transactions' % (x,t[1], t[20], t[13], t[10]))
 		x=x+1
