@@ -14,3 +14,4 @@ Contents
 * parseJson.py -> very simple parse json example
 * run-on-many.py -> Script to use ssh keys / passwords on multiple hosts, needs more work though
 * threading-example.py -> Python threading with timeouts and thread kill brutality example
+* urllib2-auth.py -> Example on how to authenticate with urllib2 towards a basic auth webpage
